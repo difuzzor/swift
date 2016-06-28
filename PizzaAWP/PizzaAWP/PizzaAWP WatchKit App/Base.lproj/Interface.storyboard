@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PizzaAWP_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" text="Tamaño" textAlignment="center" id="D51-2v-lkq"/>
+                        <picker height="80" alignment="center" id="M1O-N6-CGA">
+                            <connections>
+                                <action selector="selTam:" destination="AgC-eL-Hgc" id="98t-qc-wPr"/>
+                            </connections>
+                        </picker>
+                        <label width="136" alignment="left" text="Masa" textAlignment="center" id="Ft6-aQ-NQF"/>
+                        <picker height="87" alignment="left" id="muC-df-acw">
+                            <connections>
+                                <action selector="selMas:" destination="AgC-eL-Hgc" id="uRd-Oy-bFh"/>
+                            </connections>
+                        </picker>
+                        <label width="136" alignment="left" text="Queso" textAlignment="center" id="iMO-z4-c4T"/>
+                        <picker height="82" alignment="left" id="e9d-D6-d7d">
+                            <connections>
+                                <action selector="selQue:" destination="AgC-eL-Hgc" id="XBg-ho-uYL"/>
+                            </connections>
+                        </picker>
+                        <label width="136" alignment="left" text="Ingredientes" textAlignment="center" id="Edw-sw-eva"/>
+                        <switch width="1" alignment="left" title="Pavo" id="Lyv-J2-GF9"/>
+                        <switch width="1" alignment="left" title="Pepperoni" id="h9q-Jh-oUR"/>
+                        <switch width="1" alignment="left" title="Cebolla" id="ex1-zc-MPg"/>
+                        <button width="1" alignment="left" title="Cocinar" id="Taj-zE-f5Q">
+                            <connections>
+                                <action selector="avanza" destination="AgC-eL-Hgc" id="s2k-Jy-4pO"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="pickMas" destination="muC-df-acw" id="Vem-Vj-Tqz"/>
+                        <outlet property="pickQue" destination="e9d-D6-d7d" id="ohy-pe-V9p"/>
+                        <outlet property="pickTam" destination="M1O-N6-CGA" id="kod-6r-nls"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="305" y="447.75"/>
+        </scene>
+        <!--resultado-->
+        <scene sceneID="Hbr-as-x5u">
+            <objects>
+                <controller identifier="resultado" id="BpL-SJ-rMl" customClass="resultadoController" customModule="PizzaAWP_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="19.5" alignment="left" text="Tu pizza:" id="GBX-sR-Zgc"/>
+                        <label alignment="left" text="Label" id="fq4-T1-SRt"/>
+                        <label alignment="left" text="Label" id="6Dd-LS-IJh"/>
+                        <label alignment="left" text="Label" id="CsI-8z-Pra"/>
+                        <label width="136" height="40.5" alignment="left" text="Se esta cocinando!" numberOfLines="2" id="rbK-cP-baf"/>
+                    </items>
+                    <connections>
+                        <outlet property="masa" destination="6Dd-LS-IJh" id="Bta-ka-P9Q"/>
+                        <outlet property="queso" destination="CsI-8z-Pra" id="PD6-Kl-ish"/>
+                        <outlet property="tamano" destination="fq4-T1-SRt" id="e7L-5m-4YJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="568" y="429"/>
+        </scene>
+    </scenes>
+</document>
